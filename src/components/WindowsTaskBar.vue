@@ -57,7 +57,7 @@ export default {
   }),
   mounted() {
     this.getCurrentTime();
-    this.interval = setInterval(this.getCurrentTime, 60000);
+    this.interval = setInterval(this.getCurrentTime, 20000);
   },
   computed: {
     ...mapState(["windows"]),

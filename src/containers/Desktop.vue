@@ -5,6 +5,8 @@
     <WindowsTaskBar />
 
     <WindowNotes v-if="windows[1].active" :window="windows[1]" />
+
+    <WindowMessenger v-if="windows[2].active" :window="windows[2]" />
   </div>
 </template>
 
@@ -12,14 +14,16 @@
 import { mapState } from "vuex";
 import IconsList from "../components/IconsList";
 import WindowsTaskBar from "../components/WindowsTaskBar";
-import WindowNotes from "../components/WindowNotes";
+import WindowNotes from "../components/Windows/WindowNotes";
+import WindowMessenger from "../components/Windows/WindowMessenger";
 
 export default {
   name: "Desktop",
   components: {
     IconsList,
     WindowsTaskBar,
-    WindowNotes
+    WindowNotes,
+    WindowMessenger
   },
   computed: {
     ...mapState(["windows"])

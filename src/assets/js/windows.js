@@ -11,7 +11,7 @@ export const Windows =
         {
             id: 1,
             key: 'notes',
-            title: 'Notes utiles',
+            title: 'Notes utiles - Bloc-notes',
             image: require('../img/icons/notes.png'),
             active: false,
             selected: false
