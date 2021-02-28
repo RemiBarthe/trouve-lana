@@ -1,19 +1,28 @@
 <template>
   <div class="desktop-container">
     <IconsList />
+
     <WindowsTaskBar />
+
+    <WindowNotes v-if="windows[1].active" />
   </div>
 </template>
 
 <script>
+import { mapState } from "vuex";
 import IconsList from "../components/IconsList";
 import WindowsTaskBar from "../components/WindowsTaskBar";
+import WindowNotes from "../components/WindowNotes";
 
 export default {
   name: "Desktop",
   components: {
     IconsList,
-    WindowsTaskBar
+    WindowsTaskBar,
+    WindowNotes
+  },
+  computed: {
+    ...mapState(["windows"])
   }
 };
 </script>
