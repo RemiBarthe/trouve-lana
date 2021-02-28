@@ -1,8 +1,8 @@
 <template>
   <div class="footer__window cover">
-    <img class="footer__icon" :src="image" :alt="title" />
+    <img class="footer__icon" :src="item.image" :alt="item.title" />
 
-    <div class="footer__text">{{ title }}</div>
+    <div class="footer__text">{{ item.title }}</div>
   </div>
 </template>
 
@@ -10,8 +10,7 @@
 export default {
   name: "WindowsTaskBarItem",
   props: {
-    title: String,
-    image: String
+    item: Object
   }
 };
 </script>

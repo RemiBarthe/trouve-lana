@@ -4,7 +4,7 @@
 
     <WindowsTaskBar />
 
-    <WindowNotes v-if="windows[1].active" />
+    <WindowNotes v-if="windows[1].active" :window="windows[1]" />
   </div>
 </template>
 

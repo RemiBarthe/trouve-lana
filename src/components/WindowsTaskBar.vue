@@ -12,8 +12,7 @@
       <WindowsTaskBarItem
         v-for="(item, index) in activeItem"
         :key="index"
-        :title="item.title"
-        :image="item.image"
+        :item="item"
       />
     </div>
 
@@ -38,7 +37,7 @@
 
       <div style="position: relative; width: 0px; height: 0px;"></div>
 
-      <div class="footer__time">{{ currentTime }}</div>
+      <div class="footer__time">{{ currentDate }}</div>
     </div>
   </footer>
 </template>
@@ -52,14 +51,24 @@ export default {
   components: {
     WindowsTaskBarItem
   },
+  data: () => ({
+    currentDate: "",
+    interval: null
+  }),
+  mounted() {
+    this.getCurrentTime();
+    this.interval = setInterval(this.getCurrentTime, 60000);
+  },
   computed: {
     ...mapState(["windows"]),
     activeItem() {
       return this.windows.filter(item => item.active);
-    },
-    currentTime() {
+    }
+  },
+  methods: {
+    getCurrentTime() {
       const date = new Date();
-      return date.getHours() + ":" + date.getMinutes();
+      this.currentDate = date.getHours() + ":" + date.getMinutes();
     }
   }
 };

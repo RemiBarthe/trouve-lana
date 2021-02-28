@@ -22,15 +22,15 @@ export default {
     ...mapState(["windows"])
   },
   methods: {
-    setIconSelected(key) {
-      if (this.windows[key].selected) {
-        this.windows[key].selected = false;
+    setIconSelected(id) {
+      if (this.windows[id].selected) {
+        this.windows[id].selected = false;
       } else {
-        for (const value of Object.entries(this.windows)) {
-          this.windows[value[0]].selected = false;
-        }
+        this.windows.forEach(icon => {
+          icon.selected = false;
+        });
 
-        this.windows[key].selected = true;
+        this.windows[id].selected = true;
       }
     }
   }

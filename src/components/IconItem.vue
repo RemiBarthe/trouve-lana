@@ -1,7 +1,7 @@
 <template>
   <div
     class="icon-item"
-    :class="{ selected: icon.isSelected }"
+    :class="{ selected: icon.selected }"
     @dblclick="openWindow()"
   >
     <div class="container-image">
