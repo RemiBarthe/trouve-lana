@@ -4,6 +4,7 @@ import { Windows } from "../assets/js/windows"
 export const SET_WINDOWS_LOGGED_IN = 'SET_WINDOWS_LOGGED_IN'
 export const SET_WINDOW_ACTIVE = 'SET_WINDOW_ACTIVE'
 export const SET_WINDOW_POSITION = 'SET_WINDOW_POSITION'
+export const SET_FULL_SCEEN = 'SET_FULL_SCEEN'
 
 export const store = createStore({
     state: {
@@ -20,6 +21,9 @@ export const store = createStore({
         },
         setWindowPosition({ commit }, payload) {
             commit(SET_WINDOW_POSITION, payload)
+        },
+        setFullScreen({ commit }, payload) {
+            commit(SET_FULL_SCEEN, payload)
         }
     },
     mutations: {
@@ -32,6 +36,9 @@ export const store = createStore({
         },
         [SET_WINDOW_POSITION](state, payload) {
             state.windows[payload].position = ++state.positionMax
+        },
+        [SET_FULL_SCEEN](state, payload) {
+            state.windows[payload.id].fullScreen = payload.fullScreen
         }
     }
 })

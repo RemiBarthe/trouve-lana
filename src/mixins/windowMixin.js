@@ -8,14 +8,9 @@ export default {
         ...mapState(["positionMax"]),
         isFocus() {
             return this.window.position === this.positionMax
+        },
+        isFullScreen() {
+            return this.window.fullScreen
         }
     },
-    methods: {
-        closeWindow() {
-            this.$store.dispatch("setWindowActive", {
-                id: this.window.id,
-                active: false
-            })
-        }
-    }
 }

@@ -7,7 +7,8 @@ export const Windows =
             image: require('../img/icons/dossier.png'),
             active: false,
             selected: false,
-            position: 0
+            position: 0,
+            fullScreen: false
         },
         {
             id: 1,
@@ -16,7 +17,8 @@ export const Windows =
             image: require('../img/icons/notes.png'),
             active: false,
             selected: false,
-            position: 0
+            position: 0,
+            fullScreen: false
         },
         {
             id: 2,
@@ -25,7 +27,8 @@ export const Windows =
             image: require('../img/icons/msn.png'),
             active: false,
             selected: false,
-            position: 0
+            position: 0,
+            fullScreen: false
         },
         {
             id: 3,
@@ -34,7 +37,8 @@ export const Windows =
             image: require('../img/icons/mail.png'),
             active: false,
             selected: false,
-            position: 0
+            position: 0,
+            fullScreen: false
         },
         {
             id: 4,
@@ -43,7 +47,8 @@ export const Windows =
             image: require('../img/icons/webcam.png'),
             active: false,
             selected: false,
-            position: 0
+            position: 0,
+            fullScreen: false
         },
         {
             id: 5,
@@ -52,6 +57,7 @@ export const Windows =
             image: require('../img/icons/gps.png'),
             active: false,
             selected: false,
-            position: 0
+            position: 0,
+            fullScreen: false
         }
     ]

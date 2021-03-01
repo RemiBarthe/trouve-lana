@@ -3,9 +3,22 @@
     <div class="title-bar-text">
       <img alt="" :src="window.image" />{{ window.title }}
     </div>
+
     <div class="title-bar-controls">
       <button aria-label="Minimize"></button>
-      <button aria-label="Maximize"></button>
+
+      <button
+        aria-label="Unmaximize"
+        @click="setFullScreen(false)"
+        v-if="window.fullScreen"
+      ></button>
+
+      <button
+        aria-label="Maximize"
+        @click="setFullScreen(true)"
+        v-else
+      ></button>
+
       <button aria-label="Close" @click="closeWindow()"></button>
     </div>
   </div>
@@ -22,6 +35,12 @@ export default {
       this.$store.dispatch("setWindowActive", {
         id: this.window.id,
         active: false
+      });
+    },
+    setFullScreen(value) {
+      this.$store.dispatch("setFullScreen", {
+        id: this.window.id,
+        fullScreen: value
       });
     }
   }

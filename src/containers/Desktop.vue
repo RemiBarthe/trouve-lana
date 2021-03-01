@@ -94,5 +94,26 @@ export default {
       border-color: #4e6ada;
     }
   }
+
+  .full-screen {
+    top: 0;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    width: auto;
+    height: auto;
+  }
+
+  .title-bar-controls button[aria-label="Unmaximize"] {
+    background-image: url(../assets/img/picto-unmaximize.png);
+
+    &:hover {
+      background-image: url(../assets/img/picto-unmaximize-light.png);
+    }
+
+    &:active {
+      background-image: url(../assets/img/picto-unmaximize-dark.png);
+    }
+  }
 }
 </style>

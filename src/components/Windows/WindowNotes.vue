@@ -1,7 +1,7 @@
 <template>
   <div
     class="window window-notes"
-    :class="{ 'not-focus': !isFocus }"
+    :class="{ 'not-focus': !isFocus, 'full-screen': isFullScreen }"
     :style="`z-index: ${window.position}`"
   >
     <WindowTitleBar :window="window" />
@@ -44,10 +44,18 @@ export default {
 <style lang="scss" scoped>
 .window-notes {
   width: 600px;
+  height: 340px;
   position: absolute;
   left: 250px;
   bottom: 60px;
   user-select: none;
+  display: flex;
+  flex-flow: column nowrap;
+  padding-bottom: 18px;
+
+  .window-body {
+    height: 100%;
+  }
 
   .toolbar {
     display: flex;
@@ -68,7 +76,7 @@ export default {
 
   .text-notes {
     width: 100%;
-    height: 340px;
+    height: 100%;
     outline: none;
     font-family: "Lucida Console", monospace;
     font-size: 13px;

@@ -1,7 +1,7 @@
 <template>
   <div
     class="window window-documents"
-    :class="{ 'not-focus': !isFocus }"
+    :class="{ 'not-focus': !isFocus, 'full-screen': isFullScreen }"
     :style="`z-index: ${window.position}`"
   >
     <WindowTitleBar :window="window" />
