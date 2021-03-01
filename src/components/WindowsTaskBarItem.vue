@@ -1,5 +1,5 @@
 <template>
-  <div class="footer__window cover">
+  <div class="footer__window cover" :class="{ focus: isFocus }">
     <img class="footer__icon" :src="item.image" :alt="item.title" />
 
     <div class="footer__text">{{ item.title }}</div>
@@ -7,10 +7,18 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
+
 export default {
   name: "WindowsTaskBarItem",
   props: {
     item: Object
+  },
+  computed: {
+    ...mapState(["positionMax"]),
+    isFocus() {
+      return this.item.position === this.positionMax;
+    }
   }
 };
 </script>
@@ -48,5 +56,10 @@ export default {
   background-color: #1e52b7;
   box-shadow: inset 0 0 1px 1px rgba(0, 0, 0, 0.3),
     inset 1px 0 1px rgba(0, 0, 0, 0.7);
+}
+.focus {
+  background-color: rgb(30, 82, 183);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 1px 1px inset,
+    rgba(0, 0, 0, 0.7) 1px 0px 1px inset;
 }
 </style>

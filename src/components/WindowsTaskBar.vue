@@ -13,6 +13,7 @@
         v-for="(item, index) in activeItem"
         :key="index"
         :item="item"
+        @click="setWindowPosition(item.id)"
       />
     </div>
 
@@ -69,6 +70,9 @@ export default {
     getCurrentTime() {
       const date = new Date();
       this.currentDate = date.getHours() + ":" + date.getMinutes();
+    },
+    setWindowPosition(id) {
+      this.$store.dispatch("setWindowPosition", id);
     }
   }
 };
