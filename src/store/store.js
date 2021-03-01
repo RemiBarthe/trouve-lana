@@ -1,5 +1,6 @@
 import { createStore } from "vuex"
 import { Windows } from "../assets/js/windows"
+import { Conversations } from "../assets/js/conversations"
 
 export const SET_WINDOWS_LOGGED_IN = 'SET_WINDOWS_LOGGED_IN'
 export const SET_WINDOW_ACTIVE = 'SET_WINDOW_ACTIVE'
@@ -10,6 +11,7 @@ export const store = createStore({
     state: {
         windowsLoggedIn: false,
         windows: Windows,
+        conversations: Conversations,
         positionMax: 0
     },
     actions: {
