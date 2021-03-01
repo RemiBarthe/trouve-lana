@@ -2,7 +2,7 @@ export const Conversations = [
     {
         name: 'Alfredo',
         picture: require('../img/icons/msn.png'),
-        isLocked: 'LEMOTDEPASSE',
+        password: 'LEMOTDEPASSE',
         messages: [
             {
                 content: 'Salut ! A quelle heure la soirée ?',
@@ -89,7 +89,7 @@ export const Conversations = [
     {
         name: 'Alice',
         picture: require('../img/icons/msn.png'),
-        isLocked: '',
+        password: '',
         messages: [
             {
                 content: 'aaaaa',
@@ -100,7 +100,7 @@ export const Conversations = [
     {
         name: 'Christine',
         picture: require('../img/icons/msn.png'),
-        isLocked: '',
+        password: '',
         messages: [
             {
                 content: 'Ca va je t’ai vu partir de la soirée qu’est ce qui se passe ?',
@@ -247,7 +247,7 @@ export const Conversations = [
     {
         name: 'Justine',
         picture: require('../img/icons/msn.png'),
-        isLocked: '',
+        password: '',
         messages: [
             {
                 content: 'aaaaa',
@@ -258,7 +258,7 @@ export const Conversations = [
     {
         name: 'Paul',
         picture: require('../img/icons/msn.png'),
-        isLocked: '',
+        password: '',
         messages: [
             {
                 content: 'Yo !',
@@ -461,7 +461,7 @@ export const Conversations = [
     {
         name: 'Valentin',
         picture: require('../img/icons/msn.png'),
-        isLocked: '',
+        password: '',
         messages: [
             {
                 content: 'aaaaa',

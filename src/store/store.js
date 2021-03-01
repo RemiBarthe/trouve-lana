@@ -6,6 +6,7 @@ export const SET_WINDOWS_LOGGED_IN = 'SET_WINDOWS_LOGGED_IN'
 export const SET_WINDOW_ACTIVE = 'SET_WINDOW_ACTIVE'
 export const SET_WINDOW_POSITION = 'SET_WINDOW_POSITION'
 export const SET_FULL_SCEEN = 'SET_FULL_SCEEN'
+export const SET_CONVERSATION_PASSWORD = 'SET_CONVERSATION_PASSWORD'
 
 export const store = createStore({
     state: {
@@ -26,6 +27,9 @@ export const store = createStore({
         },
         setFullScreen({ commit }, payload) {
             commit(SET_FULL_SCEEN, payload)
+        },
+        setConversationPassword({ commit }, payload) {
+            commit(SET_CONVERSATION_PASSWORD, payload)
         }
     },
     mutations: {
@@ -41,6 +45,9 @@ export const store = createStore({
         },
         [SET_FULL_SCEEN](state, payload) {
             state.windows[payload.id].fullScreen = payload.fullScreen
+        },
+        [SET_CONVERSATION_PASSWORD](state, payload) {
+            state.conversations[payload.id].password = payload.password
         }
     }
 })

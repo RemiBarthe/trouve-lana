@@ -14,7 +14,7 @@
           @click="switchConversation(index)"
           :class="[index === idActive ? 'selected' : '']"
         >
-          <div class="overlay-locked" v-if="conversation.isLocked">
+          <div class="overlay-locked" v-if="conversation.password">
             <img
               alt="locked"
               src="../../assets/img/picto-lock.png"
@@ -29,7 +29,15 @@
         </div>
       </div>
 
-      <div v-if="activeConversation.isLocked"></div>
+      <div class="locked-screen" v-if="activeConversation.password">
+        <p>Un mot de passe est requis pour accéder aux messages</p>
+
+        <input v-model="inputPassword" type="password" />
+
+        <button @click="checkPassword()">
+          Confirmer
+        </button>
+      </div>
 
       <MessengerConversation v-else :conversation="activeConversation" />
     </div>
@@ -49,7 +57,8 @@ export default {
     MessengerConversation
   },
   data: () => ({
-    idActive: 1
+    idActive: 1,
+    inputPassword: ""
   }),
   computed: {
     ...mapState(["conversations"]),
@@ -60,6 +69,16 @@ export default {
   methods: {
     switchConversation(id) {
       this.idActive = id;
+    },
+    checkPassword() {
+      if (
+        this.inputPassword.toUpperCase() === this.activeConversation.password
+      ) {
+        this.$store.dispatch("setConversationPassword", {
+          id: this.idActive,
+          password: ""
+        });
+      }
     }
   },
   mixins: [windowMixin]
@@ -138,6 +157,26 @@ export default {
       left: 0px;
       bottom: 0px;
       right: 0px;
+    }
+  }
+
+  .locked-screen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+
+    p {
+      font-size: 14px;
+      color: white;
+      text-align: center;
+    }
+
+    input {
+      width: 300px;
+      margin-top: 20px;
+      margin-bottom: 5px;
     }
   }
 }
