@@ -30,13 +30,22 @@
       </div>
 
       <div class="locked-screen" v-if="activeConversation.password">
-        <p>Un mot de passe est requis pour accéder aux messages</p>
+        <p>
+          Un mot de passe est requis pour accéder aux messages avec
+          {{ activeConversation.name }}
+        </p>
 
-        <input v-model="inputPassword" type="password" />
+        <input
+          v-model="inputPassword"
+          type="password"
+          @keyup.enter="checkPassword()"
+        />
 
         <button @click="checkPassword()">
           Confirmer
         </button>
+
+        <p v-if="wrongPassword" class="wrong-password">Mauvais mot de passe</p>
       </div>
 
       <MessengerConversation v-else :conversation="activeConversation" />
@@ -58,7 +67,8 @@ export default {
   },
   data: () => ({
     idActive: 1,
-    inputPassword: ""
+    inputPassword: "",
+    wrongPassword: false
   }),
   computed: {
     ...mapState(["conversations"]),
@@ -78,6 +88,8 @@ export default {
           id: this.idActive,
           password: ""
         });
+      } else {
+        this.wrongPassword = true;
       }
     }
   },
@@ -171,6 +183,12 @@ export default {
       font-size: 14px;
       color: white;
       text-align: center;
+
+      &.wrong-password {
+        color: red;
+        text-shadow: 1px 1px black;
+        margin-top: 5px;
+      }
     }
 
     input {

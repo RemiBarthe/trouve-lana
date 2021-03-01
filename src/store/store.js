@@ -13,6 +13,7 @@ export const store = createStore({
         windowsLoggedIn: false,
         windows: Windows,
         conversations: Conversations,
+        messengerPassword: "filou88",
         positionMax: 0
     },
     actions: {

@@ -92,8 +92,196 @@ export const Conversations = [
         password: '',
         messages: [
             {
-                content: 'aaaaa',
+                content: 'Salut salut Lala ! hâte de te voir à la soirée ce soir',
+                isSender: false
+            },
+            {
+                content: 'Oh tu viens toi aussi ?!',
                 isSender: true
+            },
+            {
+                content: 'Bien sur, j’allais pas manquer ca ! je veux voir la suite des aventures de Lana et Valentin au premier rang ma chère',
+                isSender: false
+            },
+            {
+                content: 'ahaha, il va rien se passer, c’est juste un pote pour moi',
+                isSender: true
+            },
+            {
+                content: 'c’est ca .. comme si j’allais te croire mdrr',
+                isSender: false
+            },
+            {
+                content: 'rooh tu vas pas t’y mettre toi aussi',
+                isSender: true
+            },
+            {
+                content: 'bref on se retrouve la bas',
+                isSender: true
+            },
+            {
+                content: 'ouais a tt',
+                isSender: false
+            },
+            {
+                content: 'Alors ca s’est passé comment je t’ai vu lui parler puis t’es partie et t’es pas revenue, tu vas bien ?',
+                isSender: false
+            },
+            {
+                content: 'Non, ca va pas trop…',
+                isSender: true
+            },
+            {
+                content: 'il s’est passé quoi ?',
+                isSender: false
+            },
+            {
+                content: 'je t’explique',
+                isSender: true
+            },
+            {
+                content: 'il m’a dit que je lui plaisait mais c’est pas réciproque.. alors je suis sortie faire un tour pour me changer les idées ',
+                isSender: true
+            },
+            {
+                content: 'Et dans le rue je vois qu’il y a une mec avec une capuche qui me suit',
+                isSender: true
+            },
+            {
+                content: 'alors j’ai vraiment flippé et j’ai d’abord essayé de le semer en tournant dans le quartier',
+                isSender: true
+            },
+            {
+                content: 'mais rien a faire il me suivait toujours',
+                isSender: true
+            },
+            {
+                content: 'alors je suis rentrée chez moi en courant',
+                isSender: true
+            },
+            {
+                content: 'j’ai vraiment eu trop peur',
+                isSender: true
+            },
+            {
+                content: 'oh trop flippant',
+                isSender: false
+            },
+            {
+                content: 'mais t’es sure qu’il te suivait vraiment ?',
+                isSender: false
+            },
+            {
+                content: 'oui je te dis !',
+                isSender: true
+            },
+            {
+                content: 'trop bizarre',
+                isSender: false
+            },
+            {
+                content: 'bon bonne nuit Lala,  t’inquiete c’est surement rien',
+                isSender: false
+            },
+            {
+                content: 'toi aussi Alice',
+                isSender: true
+            },
+            {
+                content: 'Salut ! on peut parler un peu ?',
+                isSender: true
+            },
+            {
+                content: 'oui bien sur qu’est ce qu’il y a ?',
+                isSender: false
+            },
+            {
+                content: 'j’ai l’impression d’avoir revu le mec qui me suivait dans la rue à travers la fenetre de chez moi',
+                isSender: true
+            },
+            {
+                content: 'ca me fait trop peur',
+                isSender: true
+            },
+            {
+                content: 'je sais pas quoi faire',
+                isSender: true
+            },
+            {
+                content: 'chaud.. appelle la police non ? c’est peut être un psychopathe',
+                isSender: false
+            },
+            {
+                content: 'je sais pas… je suis en stress',
+                isSender: true
+            },
+            {
+                content: 'en tout cas c’est étrange tout ca… tiens moi au courant',
+                isSender: false
+            },
+            {
+                content: 'Salut salut ! ca va ? t’as pas revu le gars depuis ?',
+                isSender: false
+            },
+            {
+                content: 'si… je l’ai revue dans la rue en sortant du bahut et en rentrant chez moi',
+                isSender: true
+            },
+            {
+                content: 'je commence a paniquer',
+                isSender: true
+            },
+            {
+                content: 't’es sure que tu veux pas appeler la police ?',
+                isSender: false
+            },
+            {
+                content: 'non je veux pas avoir d’ennuis',
+                isSender: true
+            },
+            {
+                content: 'ou alors tu te casses',
+                isSender: false
+            },
+            {
+                content: 'comment ca ?',
+                isSender: true
+            },
+            {
+                content: 'bah tu pars dans un lieu sur ou il pourra pas te retrouver',
+                isSender: false
+            },
+            {
+                content: 'bonne idée, je sais ou je vais aller !',
+                isSender: true
+            },
+            {
+                content: 'ok, tiens moi au courant',
+                isSender: false
+            },
+            {
+                content: 'oui !',
+                isSender: true
+            },
+            {
+                content: 'imagine le mec il rentre chez moi et fouille mes affaires pendant que suis pas la …',
+                isSender: true
+            },
+            {
+                content: 'mdrr tu t’es crue dans un film toi !',
+                isSender: false
+            },
+            {
+                content: 'ouais j’avoue',
+                isSender: true
+            },
+            {
+                content: 'bon je te laisse',
+                isSender: true
+            },
+            {
+                content: 'A+ Lala !',
+                isSender: false
             }
         ]
     },
@@ -250,7 +438,55 @@ export const Conversations = [
         password: '',
         messages: [
             {
-                content: 'aaaaa',
+                content: 'Hello, christine m’a dit que tu avais fait le devoir de physique ?',
+                isSender: true
+            },
+            {
+                content: 'Yep je l’ai fait',
+                isSender: false
+            },
+            {
+                content: 'Oooh tu pourrais me le filer vite fait ? j’ai complètement oublié de le faire, j’ai pas la tête aux devoirs en ce moment…',
+                isSender: true
+            },
+            {
+                content: 'Yes pas de soucis',
+                isSender: false
+            },
+            {
+                content: 'Oooh merci beaucoup tu me sauves la vie',
+                isSender: true
+            },
+            {
+                content: 'Je sais pas ce que j’aurais fait sans toi',
+                isSender: true
+            },
+            {
+                content: 'Je peux pas me permettre de me ramasser une autre sale note',
+                isSender: true
+            },
+            {
+                content: 'Ahaha t’inquiete je t’envoie ca par mail',
+                isSender: false
+            },
+            {
+                content: 'C’est quoi ton mail ?',
+                isSender: false
+            },
+            {
+                content: 'Merci !! Merci !!!!',
+                isSender: true
+            },
+            {
+                content: 'Mon  mail c’est [mailLena]',
+                isSender: true
+            },
+            {
+                content: 'Super ! je t’envoi ca dans la soirée',
+                isSender: false
+            },
+            {
+                content: 'Merci !! tu gères',
                 isSender: true
             }
         ]
@@ -464,8 +700,76 @@ export const Conversations = [
         password: '',
         messages: [
             {
-                content: 'aaaaa',
+                content: 'Salut, tu viens demain chez Alfredo',
+                isSender: false
+            },
+            {
+                content: 'hey, ouais je viens',
                 isSender: true
+            },
+            {
+                content: 'cool !',
+                isSender: false
+            },
+            {
+                content: 'hâte de te voir là bas :)',
+                isSender: false
+            },
+            {
+                content: 'ouais, ca va etre marrant',
+                isSender: true
+            },
+            {
+                content: 'oui',
+                isSender: false
+            },
+            {
+                content: 'Salut ca va ? je suis désolé pour hier',
+                isSender: false
+            },
+            {
+                content: 'je savais pas que t’allais le prendre comme ca',
+                isSender: false
+            },
+            {
+                content: 'non t’inquiète pas c’est rien',
+                isSender: true
+            },
+            {
+                content: 'd’accord, on se voit en cours ?',
+                isSender: false
+            },
+            {
+                content: 'oui',
+                isSender: true
+            },
+            {
+                content: 'A demain :)',
+                isSender: false
+            },
+            {
+                content: 'a demain',
+                isSender: true
+            },
+            {
+                content: 'Ca fait plusieurs jours que tu viens plus, ca va ? t’es malade ?',
+                isSender: false
+            },
+            {
+                content: 'je peux prendre tes cours si tu veux et les rapporter chez toi',
+                isSender: false
+            },
+            {
+                content: 'comme ca on pourra passer un peu de temps ensemble',
+                isSender: false
+            },
+            {
+                content: 'Salut ca va ?',
+                isSender: false
+            },
+            {
+                content: '?',
+                isSender: false
             }
         ]
     },
