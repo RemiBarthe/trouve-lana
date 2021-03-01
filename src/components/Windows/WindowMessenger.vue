@@ -6,7 +6,31 @@
   >
     <WindowTitleBar :window="window" />
 
-    <div class="window-body">
+    <div v-if="messengerPassword" class="window-body">
+      <div class="locked-screen">
+        <img alt="logo messenger" src="../../assets/img/picto-auth.png" />
+        <p>
+          Connexion à votre compte : Lana<br />
+          Mot de passe requis
+        </p>
+
+        <input
+          v-model="inputPasswordMessenger"
+          type="password"
+          @keyup.enter="checkPasswordMessenger()"
+        />
+
+        <button @click="checkPasswordMessenger()">
+          Se connecter
+        </button>
+
+        <p v-if="wrongPasswordMessenger" class="wrong-password">
+          Mauvais mot de passe
+        </p>
+      </div>
+    </div>
+
+    <div v-else class="window-body">
       <div class="conversation-list">
         <div
           v-for="(conversation, index) in conversations"
@@ -30,22 +54,26 @@
       </div>
 
       <div class="locked-screen" v-if="activeConversation.password">
+        <img alt="lock image" src="../../assets/img/picto-lock.png" />
+
         <p>
           Un mot de passe est requis pour accéder aux messages avec
           {{ activeConversation.name }}
         </p>
 
         <input
-          v-model="inputPassword"
+          v-model="inputPasswordConversation"
           type="password"
-          @keyup.enter="checkPassword()"
+          @keyup.enter="checkPasswordConversation()"
         />
 
-        <button @click="checkPassword()">
+        <button @click="checkPasswordConversation()">
           Confirmer
         </button>
 
-        <p v-if="wrongPassword" class="wrong-password">Mauvais mot de passe</p>
+        <p v-if="wrongPasswordConversation" class="wrong-password">
+          Mauvais mot de passe
+        </p>
       </div>
 
       <MessengerConversation v-else :conversation="activeConversation" />
@@ -67,11 +95,13 @@ export default {
   },
   data: () => ({
     idActive: 1,
-    inputPassword: "",
-    wrongPassword: false
+    inputPasswordMessenger: "",
+    inputPasswordConversation: "",
+    wrongPasswordMessenger: false,
+    wrongPasswordConversation: false
   }),
   computed: {
-    ...mapState(["conversations"]),
+    ...mapState(["conversations", "messengerPassword"]),
     activeConversation() {
       return this.conversations[this.idActive];
     }
@@ -80,16 +110,28 @@ export default {
     switchConversation(id) {
       this.idActive = id;
     },
-    checkPassword() {
+    checkPasswordMessenger() {
       if (
-        this.inputPassword.toUpperCase() === this.activeConversation.password
+        this.inputPasswordMessenger.toLowerCase() === this.messengerPassword
+      ) {
+        this.$store.dispatch("setMessengerPassword", "");
+      } else {
+        this.wrongPasswordMessenger = true;
+        this.inputPasswordMessenger = "";
+      }
+    },
+    checkPasswordConversation() {
+      if (
+        this.inputPasswordConversation.toUpperCase() ===
+        this.activeConversation.password
       ) {
         this.$store.dispatch("setConversationPassword", {
           id: this.idActive,
           password: ""
         });
       } else {
-        this.wrongPassword = true;
+        this.wrongPasswordConversation = true;
+        this.inputPasswordConversation = "";
       }
     }
   },
@@ -189,6 +231,12 @@ export default {
         text-shadow: 1px 1px black;
         margin-top: 5px;
       }
+    }
+
+    img {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 10px;
     }
 
     input {
