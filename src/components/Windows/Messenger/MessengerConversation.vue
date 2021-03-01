@@ -19,9 +19,9 @@
     </div>
 
     <div class="send-message">
-      <textarea spellcheck="false"></textarea>
+      <textarea v-model="inputMessage" spellcheck="false"></textarea>
 
-      <button>Envoyer</button>
+      <button @click="sendMessage()">Envoyer</button>
     </div>
   </div>
 </template>
@@ -29,12 +29,21 @@
 <script>
 export default {
   name: "MessengerConversation",
+  data: () => ({
+    inputMessage: ""
+  }),
   props: {
     conversation: Object
   },
   computed: {
     messages() {
       return this.conversation.messages;
+    }
+  },
+  methods: {
+    sendMessage() {
+      this.messages.push({ content: this.inputMessage, isSender: true });
+      this.inputMessage = "";
     }
   }
 };

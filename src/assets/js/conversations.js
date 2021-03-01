@@ -488,6 +488,18 @@ export const Conversations = [
             {
                 content: 'Merci !! tu gères',
                 isSender: true
+            },
+            {
+                content: 'Envoyé !',
+                isSender: false
+            },
+            {
+                content: 'Ah merci encore, je peux vraiment compter sur toi',
+                isSender: true
+            },
+            {
+                content: 'np, tu m’en dois une ;)',
+                isSender: false
             }
         ]
     },
