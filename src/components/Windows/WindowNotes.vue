@@ -45,8 +45,8 @@ export default {
 .window-notes {
   width: 600px;
   position: absolute;
-  left: 200px;
-  top: 400px;
+  left: 250px;
+  bottom: 60px;
   user-select: none;
 
   .toolbar {

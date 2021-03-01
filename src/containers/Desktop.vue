@@ -4,6 +4,12 @@
 
     <WindowsTaskBar />
 
+    <WindowDocuments
+      v-if="windows[0].active"
+      :window="windows[0]"
+      @click="setWindowPosition(windows[0].id)"
+    />
+
     <WindowNotes
       v-if="windows[1].active"
       :window="windows[1]"
@@ -15,6 +21,24 @@
       :window="windows[2]"
       @click="setWindowPosition(windows[2].id)"
     />
+
+    <WindowMail
+      v-if="windows[3].active"
+      :window="windows[3]"
+      @click="setWindowPosition(windows[3].id)"
+    />
+
+    <WindowWebcam
+      v-if="windows[4].active"
+      :window="windows[4]"
+      @click="setWindowPosition(windows[4].id)"
+    />
+
+    <WindowDestination
+      v-if="windows[5].active"
+      :window="windows[5]"
+      @click="setWindowPosition(windows[5].id)"
+    />
   </div>
 </template>
 
@@ -22,16 +46,24 @@
 import { mapState } from "vuex";
 import IconsList from "../components/IconsList";
 import WindowsTaskBar from "../components/WindowsTaskBar";
+import WindowDocuments from "../components/Windows/WindowDocuments";
 import WindowNotes from "../components/Windows/WindowNotes";
 import WindowMessenger from "../components/Windows/WindowMessenger";
+import WindowMail from "../components/Windows/WindowMail";
+import WindowWebcam from "../components/Windows/WindowWebcam";
+import WindowDestination from "../components/Windows/WindowDestination";
 
 export default {
   name: "Desktop",
   components: {
     IconsList,
     WindowsTaskBar,
+    WindowDocuments,
     WindowNotes,
-    WindowMessenger
+    WindowMessenger,
+    WindowMail,
+    WindowWebcam,
+    WindowDestination
   },
   computed: {
     ...mapState(["windows"])

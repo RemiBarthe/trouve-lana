@@ -1,6 +1,6 @@
 <template>
   <div
-    class="window window-messenger"
+    class="window window-mail"
     :class="{ 'not-focus': !isFocus }"
     :style="`z-index: ${window.position}`"
   >
@@ -15,7 +15,7 @@ import windowMixin from "../../mixins/windowMixin";
 import WindowTitleBar from "./WindowTitleBar";
 
 export default {
-  name: "WindowMessenger",
+  name: "WindowMail",
   components: {
     WindowTitleBar
   },
@@ -24,12 +24,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.window-messenger {
+.window-mail {
   width: 600px;
   height: 500px;
   position: absolute;
-  right: 200px;
-  top: 80px;
+  right: 130px;
+  bottom: 50px;
   user-select: none;
 }
 </style>
