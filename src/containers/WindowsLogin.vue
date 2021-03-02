@@ -11,7 +11,7 @@
         <img
           class="logo-windows"
           alt="logo windows XP"
-          src="../assets/img/logo-windows-xp.png"
+          src="@/assets/img/logo-windows-xp.png"
         />
 
         <p class="login-title">
@@ -26,7 +26,7 @@
         <img
           class="logo-user"
           alt="logo user"
-          src="../assets/img/logo-user.png"
+          src="@/assets/img/logo-user.png"
         />
 
         <p class="user-name">
@@ -42,7 +42,7 @@
         <img
           class="logo-shutdown"
           alt="logo shutdown"
-          src="../assets/img/logo-shutdown.png"
+          src="@/assets/img/logo-shutdown.png"
         />
 
         <p class="shutdown-title">Arrêter l'ordinateur</p>

@@ -3,7 +3,7 @@
     <div class="function-bar__button--disable">
       <img
         class="function-bar__icon"
-        src="../../../assets/img/picto-arrow-left.png"
+        src="@/assets/img/picto-arrow-left.png"
         alt=""
       /><span class="function-bar__text">Précédente</span>
       <div class="function-bar__arrow"></div>
@@ -11,7 +11,7 @@
     <div class="function-bar__button--disable">
       <img
         class="function-bar__icon"
-        src="../../../assets/img/picto-arrow-right.png"
+        src="@/assets/img/picto-arrow-right.png"
         alt=""
       />
       <div class="function-bar__arrow"></div>
@@ -19,7 +19,7 @@
     <div class="function-bar__button">
       <img
         class="function-bar__icon--normalize"
-        src="../../../assets/img/picto-previous-folder.png"
+        src="@/assets/img/picto-previous-folder.png"
         alt=""
       />
     </div>
@@ -27,14 +27,14 @@
     <div class="function-bar__button">
       <img
         class="function-bar__icon--normalize "
-        src="../../../assets/img/picto-search.png"
+        src="@/assets/img/picto-search.png"
         alt=""
       /><span class="function-bar__text">Rechercher</span>
     </div>
     <div class="function-bar__button">
       <img
         class="function-bar__icon--normalize"
-        src="../../../assets/img/picto-folders.png"
+        src="@/assets/img/picto-folders.png"
         alt=""
       /><span class="function-bar__text">Dossiers</span>
     </div>
@@ -42,7 +42,7 @@
     <div class="function-bar__button">
       <img
         class="function-bar__icon--margin12"
-        src="../../../assets/img/picto-folder-option.png"
+        src="@/assets/img/picto-folder-option.png"
         alt=""
       />
       <div class="function-bar__arrow"></div>

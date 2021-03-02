@@ -26,7 +26,7 @@
 
 <script>
 export default {
-  name: "WindowTitleBar",
+  name: "TitleBar",
   props: {
     window: Object
   },

@@ -4,7 +4,7 @@
       <div class="footer__start__menu"></div>
 
       <img
-        src="../assets/img/logo-start.png"
+        src="@/assets/img/logo-start.png"
         alt="démarrer"
         class="footer__start"
       />
@@ -20,19 +20,19 @@
     <div class="footer__items right">
       <img
         class="footer__icon"
-        src="../assets/img/picto-footer1.png"
+        src="@/assets/img/picto-footer1.png"
         alt="picto footer 1"
       />
 
       <img
         class="footer__icon"
-        src="../assets/img/picto-footer2.png"
+        src="@/assets/img/picto-footer2.png"
         alt="picto footer 2"
       />
 
       <img
         class="footer__icon"
-        src="../assets/img/picto-footer3.png"
+        src="@/assets/img/picto-footer3.png"
         alt="picto footer 3"
       />
 

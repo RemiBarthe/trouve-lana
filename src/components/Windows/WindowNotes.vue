@@ -4,7 +4,7 @@
     :class="{ 'not-focus': !isFocus, 'full-screen': isFullScreen }"
     :style="`z-index: ${window.position}`"
   >
-    <WindowTitleBar :window="window" />
+    <TitleBar :window="window" />
 
     <div class="window-body">
       <Toolbar :items="toolbarItems" />
@@ -19,15 +19,15 @@
 </template>
 
 <script>
-import { Notes } from "../../assets/js/notes";
-import windowMixin from "../../mixins/windowMixin";
-import WindowTitleBar from "./WindowTitleBar";
+import { Notes } from "@/assets/js/notes";
+import windowMixin from "@/mixins/windowMixin";
+import TitleBar from "./shared/TitleBar";
 import Toolbar from "./shared/Toolbar";
 
 export default {
   name: "WindowNotes",
   components: {
-    WindowTitleBar,
+    TitleBar,
     Toolbar
   },
   data: () => ({

@@ -4,7 +4,7 @@
     :class="{ 'not-focus': !isFocus, 'full-screen': isFullScreen }"
     :style="`z-index: ${window.position}`"
   >
-    <WindowTitleBar :window="window" />
+    <TitleBar :window="window" />
 
     <div class="window-body">
       <Toolbar :items="toolbarItems" />
@@ -15,8 +15,8 @@
 </template>
 
 <script>
-import windowMixin from "../../mixins/windowMixin";
-import WindowTitleBar from "./WindowTitleBar";
+import windowMixin from "@/mixins/windowMixin";
+import TitleBar from "./shared/TitleBar";
 import Toolbar from "./shared/Toolbar";
 import FunctionBar from "./shared/FunctionBar";
 
@@ -26,7 +26,7 @@ export default {
     toolbarItems: ["Fichier", "Edition", "Affichage", "Favoris", "Outils", "?"]
   }),
   components: {
-    WindowTitleBar,
+    TitleBar,
     Toolbar,
     FunctionBar
   },

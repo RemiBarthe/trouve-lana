@@ -4,11 +4,11 @@
     :class="{ 'not-focus': !isFocus, 'full-screen': isFullScreen }"
     :style="`z-index: ${window.position}`"
   >
-    <WindowTitleBar :window="window" />
+    <TitleBar :window="window" />
 
     <div v-if="messengerPassword" class="window-body">
       <div class="locked-screen">
-        <img alt="logo messenger" src="../../assets/img/picto-auth.png" />
+        <img alt="logo messenger" src="@/assets/img/picto-auth.png" />
         <p>
           Connexion à votre compte : Lana<br />
           Mot de passe requis
@@ -41,7 +41,7 @@
           <div class="overlay-locked" v-if="conversation.password">
             <img
               alt="locked"
-              src="../../assets/img/picto-lock.png"
+              src="@/assets/img/picto-lock.png"
               class="locked"
             />
           </div>
@@ -54,7 +54,7 @@
       </div>
 
       <div class="locked-screen" v-if="activeConversation.password">
-        <img alt="lock image" src="../../assets/img/picto-lock.png" />
+        <img alt="lock image" src="@/assets/img/picto-lock.png" />
 
         <p>
           Un mot de passe est requis pour accéder aux messages avec
@@ -83,14 +83,14 @@
 
 <script>
 import { mapState } from "vuex";
-import windowMixin from "../../mixins/windowMixin";
-import WindowTitleBar from "./WindowTitleBar";
+import windowMixin from "@/mixins/windowMixin";
+import TitleBar from "./shared/TitleBar";
 import MessengerConversation from "./messenger/MessengerConversation";
 
 export default {
   name: "WindowMessenger",
   components: {
-    WindowTitleBar,
+    TitleBar,
     MessengerConversation
   },
   data: () => ({

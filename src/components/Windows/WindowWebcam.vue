@@ -4,20 +4,20 @@
     :class="{ 'not-focus': !isFocus, 'full-screen': isFullScreen }"
     :style="`z-index: ${window.position}`"
   >
-    <WindowTitleBar :window="window" />
+    <TitleBar :window="window" />
 
     <div class="window-body"></div>
   </div>
 </template>
 
 <script>
-import windowMixin from "../../mixins/windowMixin";
-import WindowTitleBar from "./WindowTitleBar";
+import windowMixin from "@/mixins/windowMixin";
+import TitleBar from "./shared/TitleBar";
 
 export default {
   name: "WindowWebcam",
   components: {
-    WindowTitleBar
+    TitleBar
   },
   mixins: [windowMixin]
 };
