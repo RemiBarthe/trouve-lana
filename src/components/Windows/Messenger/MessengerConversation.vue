@@ -42,8 +42,10 @@ export default {
   },
   methods: {
     sendMessage() {
-      this.messages.push({ content: this.inputMessage, isSender: true });
-      this.inputMessage = "";
+      if (this.inputMessage.trim()) {
+        this.messages.push({ content: this.inputMessage, isSender: true });
+        this.inputMessage = "";
+      }
     }
   }
 };
