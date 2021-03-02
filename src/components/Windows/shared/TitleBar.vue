@@ -5,7 +5,7 @@
     </div>
 
     <div class="title-bar-controls">
-      <button aria-label="Minimize"></button>
+      <button aria-label="Minimize" @click.stop="minimizeWindow()"></button>
 
       <button
         aria-label="Unmaximize"
@@ -35,6 +35,12 @@ export default {
       this.$store.dispatch("setWindowActive", {
         id: this.window.id,
         active: false
+      });
+    },
+    minimizeWindow() {
+      this.$store.dispatch("setWindowPosition", {
+        id: this.window.id,
+        position: -1
       });
     },
     setFullScreen(value) {

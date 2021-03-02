@@ -72,7 +72,7 @@ export default {
       this.currentDate = date.getHours() + ":" + date.getMinutes();
     },
     setWindowPosition(id) {
-      this.$store.dispatch("setWindowPosition", id);
+      this.$store.dispatch("setWindowPosition", { id: id });
     }
   }
 };

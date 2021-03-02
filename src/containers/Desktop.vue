@@ -70,7 +70,7 @@ export default {
   },
   methods: {
     setWindowPosition(id) {
-      this.$store.dispatch("setWindowPosition", id);
+      this.$store.dispatch("setWindowPosition", { id: id });
     }
   }
 };

@@ -46,7 +46,9 @@ export const store = createStore({
             state.windows[payload.id].position = ++state.positionMax
         },
         [SET_WINDOW_POSITION](state, payload) {
-            state.windows[payload].position = ++state.positionMax
+            payload.position ?
+                state.windows[payload.id].position = payload.position
+                : state.windows[payload.id].position = ++state.positionMax
         },
         [SET_FULL_SCEEN](state, payload) {
             state.windows[payload.id].fullScreen = payload.fullScreen
