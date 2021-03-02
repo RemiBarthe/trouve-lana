@@ -85,7 +85,7 @@
 import { mapState } from "vuex";
 import windowMixin from "../../mixins/windowMixin";
 import WindowTitleBar from "./WindowTitleBar";
-import MessengerConversation from "./Messenger/MessengerConversation";
+import MessengerConversation from "./messenger/MessengerConversation";
 
 export default {
   name: "WindowMessenger",

@@ -7,13 +7,7 @@
     <WindowTitleBar :window="window" />
 
     <div class="window-body">
-      <section class="toolbar">
-        <div>Fichier</div>
-        <div>Edition</div>
-        <div>Format</div>
-        <div>Affichage</div>
-        <div>?</div>
-      </section>
+      <Toolbar :items="toolbarItems" />
 
       <textarea
         class="text-notes"
@@ -28,14 +22,17 @@
 import { Notes } from "../../assets/js/notes";
 import windowMixin from "../../mixins/windowMixin";
 import WindowTitleBar from "./WindowTitleBar";
+import Toolbar from "./shared/Toolbar";
 
 export default {
   name: "WindowNotes",
   components: {
-    WindowTitleBar
+    WindowTitleBar,
+    Toolbar
   },
   data: () => ({
-    notes: Notes
+    notes: Notes,
+    toolbarItems: ["Fichier", "Edition", "Format", "Affichage", "?"]
   }),
   mixins: [windowMixin]
 };
@@ -55,23 +52,7 @@ export default {
 
   .window-body {
     height: 100%;
-  }
-
-  .toolbar {
-    display: flex;
-    margin-bottom: 1px;
-
-    div {
-      padding: 2px 7px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      &:hover {
-        background: #0e48a1;
-        color: white;
-      }
-    }
+    margin: 3px;
   }
 
   .text-notes {

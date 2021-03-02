@@ -46,12 +46,12 @@
 import { mapState } from "vuex";
 import IconsList from "../components/IconsList";
 import WindowsTaskBar from "../components/WindowsTaskBar";
-import WindowDocuments from "../components/Windows/WindowDocuments";
-import WindowNotes from "../components/Windows/WindowNotes";
-import WindowMessenger from "../components/Windows/WindowMessenger";
-import WindowMail from "../components/Windows/WindowMail";
-import WindowWebcam from "../components/Windows/WindowWebcam";
-import WindowDestination from "../components/Windows/WindowDestination";
+import WindowDocuments from "../components/windows/WindowDocuments";
+import WindowNotes from "../components/windows/WindowNotes";
+import WindowMessenger from "../components/windows/WindowMessenger";
+import WindowMail from "../components/windows/WindowMail";
+import WindowWebcam from "../components/windows/WindowWebcam";
+import WindowDestination from "../components/windows/WindowDestination";
 
 export default {
   name: "Desktop",

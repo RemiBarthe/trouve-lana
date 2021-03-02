@@ -6,18 +6,29 @@
   >
     <WindowTitleBar :window="window" />
 
-    <div class="window-body"></div>
+    <div class="window-body">
+      <Toolbar :items="toolbarItems" />
+
+      <FunctionBar />
+    </div>
   </div>
 </template>
 
 <script>
 import windowMixin from "../../mixins/windowMixin";
 import WindowTitleBar from "./WindowTitleBar";
+import Toolbar from "./shared/Toolbar";
+import FunctionBar from "./shared/FunctionBar";
 
 export default {
   name: "WindowDocuments",
+  data: () => ({
+    toolbarItems: ["Fichier", "Edition", "Affichage", "Favoris", "Outils", "?"]
+  }),
   components: {
-    WindowTitleBar
+    WindowTitleBar,
+    Toolbar,
+    FunctionBar
   },
   mixins: [windowMixin]
 };
@@ -31,5 +42,9 @@ export default {
   left: 110px;
   top: 50px;
   user-select: none;
+
+  .window-body {
+    margin: 3px;
+  }
 }
 </style>
