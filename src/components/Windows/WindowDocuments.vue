@@ -10,6 +10,8 @@
       <Toolbar :items="toolbarItems" />
 
       <FunctionBar />
+
+      <AdressBar />
     </div>
   </div>
 </template>
@@ -19,6 +21,7 @@ import windowMixin from "@/mixins/windowMixin";
 import TitleBar from "./shared/TitleBar";
 import Toolbar from "./shared/Toolbar";
 import FunctionBar from "./shared/FunctionBar";
+import AdressBar from "./shared/AdressBar";
 
 export default {
   name: "WindowDocuments",
@@ -28,7 +31,8 @@ export default {
   components: {
     TitleBar,
     Toolbar,
-    FunctionBar
+    FunctionBar,
+    AdressBar
   },
   mixins: [windowMixin]
 };
