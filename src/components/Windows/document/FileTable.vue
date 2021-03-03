@@ -10,27 +10,51 @@
     </thead>
 
     <tbody>
-      <tr v-for="file in files" :key="file.id">
+      <tr
+        v-for="photo in photos"
+        :key="photo.id"
+        :class="{ selected: photo.selected }"
+        @click="selectPhoto(photo.id)"
+        @dblclick="openPhoto()"
+      >
         <td class="image-name">
           <div>
             <img alt="picto image" src="@/assets/img/picto-image.png" />{{
-              file.name
+              photo.name
             }}
           </div>
         </td>
-        <td class="align-right">{{ file.size }}</td>
-        <td>{{ file.type }}</td>
-        <td>{{ file.date }}</td>
+        <td class="align-right">{{ photo.size }}</td>
+        <td>{{ photo.type }}</td>
+        <td>{{ photo.date }}</td>
       </tr>
     </tbody>
   </table>
 </template>
 
 <script>
+import { mapState } from "vuex";
+
 export default {
   name: "FileTable",
-  props: {
-    files: Array
+  computed: {
+    ...mapState(["photos"])
+  },
+  methods: {
+    selectPhoto(id) {
+      if (this.photos[id].selected) {
+        this.photos[id].selected = false;
+      } else {
+        this.photos.forEach(photo => {
+          photo.selected = false;
+        });
+
+        this.photos[id].selected = true;
+      }
+    },
+    openPhoto() {
+      console.log("open");
+    }
   }
 };
 </script>
@@ -54,7 +78,7 @@ export default {
 
   tbody {
     tr {
-      &:hover {
+      &.selected {
         background: #0e48a1;
         color: white;
       }

@@ -13,7 +13,7 @@
 
       <AdressBar />
 
-      <FileTable :files="photos" />
+      <FileTable />
     </div>
   </div>
 </template>
@@ -25,7 +25,6 @@ import Toolbar from "./shared/Toolbar";
 import FunctionBar from "./shared/FunctionBar";
 import AdressBar from "./shared/AdressBar";
 import FileTable from "./document/FileTable";
-import { mapState } from "vuex";
 
 export default {
   name: "WindowDocuments",
@@ -39,9 +38,6 @@ export default {
   data: () => ({
     toolbarItems: ["Fichier", "Edition", "Affichage", "Favoris", "Outils", "?"]
   }),
-  computed: {
-    ...mapState(["photos"])
-  },
   mixins: [windowMixin]
 };
 </script>

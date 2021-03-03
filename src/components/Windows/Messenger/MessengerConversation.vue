@@ -64,7 +64,7 @@ export default {
     align-items: center;
     padding: 10px;
     background: #ddd;
-    border-bottom: 2px solid #bbb;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 
@@ -77,6 +77,8 @@ export default {
 
   .list-message {
     overflow-y: scroll;
+    border-top: solid 1px rgba(0, 0, 0, 0.1);
+
     .feed {
       display: flex;
       flex-direction: column;
