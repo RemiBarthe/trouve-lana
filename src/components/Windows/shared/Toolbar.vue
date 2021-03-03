@@ -18,9 +18,10 @@ export default {
   display: flex;
   margin-bottom: 1px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background: #ece9d8;
 
   div {
-    padding: 3px 7px;
+    padding: 4px 7px;
     display: flex;
     align-items: center;
     justify-content: center;

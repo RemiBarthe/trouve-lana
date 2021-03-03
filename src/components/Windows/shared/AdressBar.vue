@@ -32,6 +32,7 @@ export default {
 
 <style lang="scss" scoped>
 .address-bar {
+  background: #ece9d8;
   flex-shrink: 0;
   border-top: 1px solid rgba(255, 255, 255, 0.7);
   height: 20px;

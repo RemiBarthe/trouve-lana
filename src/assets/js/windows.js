@@ -3,7 +3,7 @@ export const Windows =
         {
             id: 0,
             key: 'documents',
-            title: 'Mes Documents',
+            title: 'Mes photos',
             image: require('../img/icons/dossier.png'),
             active: false,
             selected: false,

@@ -53,6 +53,7 @@ export default {
   .window-body {
     height: 100%;
     margin: 3px;
+    margin-top: 1px;
   }
 
   .text-notes {

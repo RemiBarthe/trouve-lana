@@ -12,6 +12,8 @@
       <FunctionBar />
 
       <AdressBar />
+
+      <FileTable :files="photos" />
     </div>
   </div>
 </template>
@@ -22,17 +24,23 @@ import TitleBar from "./shared/TitleBar";
 import Toolbar from "./shared/Toolbar";
 import FunctionBar from "./shared/FunctionBar";
 import AdressBar from "./shared/AdressBar";
+import FileTable from "./document/FileTable";
+import { mapState } from "vuex";
 
 export default {
   name: "WindowDocuments",
-  data: () => ({
-    toolbarItems: ["Fichier", "Edition", "Affichage", "Favoris", "Outils", "?"]
-  }),
   components: {
     TitleBar,
     Toolbar,
     FunctionBar,
-    AdressBar
+    AdressBar,
+    FileTable
+  },
+  data: () => ({
+    toolbarItems: ["Fichier", "Edition", "Affichage", "Favoris", "Outils", "?"]
+  }),
+  computed: {
+    ...mapState(["photos"])
   },
   mixins: [windowMixin]
 };
@@ -46,9 +54,11 @@ export default {
   left: 110px;
   top: 50px;
   user-select: none;
+  background: white;
 
   .window-body {
     margin: 3px;
+    margin-top: 1px;
   }
 }
 </style>

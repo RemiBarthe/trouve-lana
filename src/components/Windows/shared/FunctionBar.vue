@@ -58,6 +58,7 @@ export default {
 
 <style lang="scss" scoped>
 .function-bar {
+  background: #ece9d8;
   height: 36px;
   display: flex;
   align-items: center;
