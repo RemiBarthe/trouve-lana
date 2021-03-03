@@ -9,6 +9,7 @@ export const SET_WINDOW_POSITION = 'SET_WINDOW_POSITION'
 export const SET_FULL_SCEEN = 'SET_FULL_SCEEN'
 export const SET_CONVERSATION_PASSWORD = 'SET_CONVERSATION_PASSWORD'
 export const SET_MESSENGER_PASSWORD = 'SET_MESSENGER_PASSWORD'
+export const SET_ACTIVE_PHOTO = 'SET_ACTIVE_PHOTO'
 
 export const store = createStore({
     state: {
@@ -16,8 +17,10 @@ export const store = createStore({
         windows: Windows,
         conversations: Conversations,
         photos: Photos,
+        activePhoto: {},
         messengerPassword: "filou88",
-        positionMax: 0
+        positionMax: 0,
+
     },
     actions: {
         setWindowsLoggedIn({ commit }, payload) {
@@ -37,6 +40,9 @@ export const store = createStore({
         },
         setMessengerPassword({ commit }, payload) {
             commit(SET_MESSENGER_PASSWORD, payload)
+        },
+        setActivePhoto({ commit }, payload) {
+            commit(SET_ACTIVE_PHOTO, payload)
         }
     },
     mutations: {
@@ -60,6 +66,9 @@ export const store = createStore({
         },
         [SET_MESSENGER_PASSWORD](state, payload) {
             state.messengerPassword = payload
+        },
+        [SET_ACTIVE_PHOTO](state, payload) {
+            state.activePhoto = payload
         }
     }
 })

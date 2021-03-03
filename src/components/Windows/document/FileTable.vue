@@ -15,7 +15,7 @@
         :key="photo.id"
         :class="{ selected: photo.selected }"
         @click="selectPhoto(photo.id)"
-        @dblclick="openPhoto()"
+        @dblclick="openPhoto(photo)"
       >
         <td class="image-name">
           <div>
@@ -52,8 +52,13 @@ export default {
         this.photos[id].selected = true;
       }
     },
-    openPhoto() {
-      console.log("open");
+    openPhoto(photo) {
+      this.$store.dispatch("setActivePhoto", photo);
+
+      this.$store.dispatch("setWindowActive", {
+        id: 6,
+        active: true
+      });
     }
   }
 };
@@ -81,6 +86,10 @@ export default {
       &.selected {
         background: #0e48a1;
         color: white;
+
+        img {
+          opacity: 0.6;
+        }
       }
     }
 

@@ -6,7 +6,8 @@ export const Photos =
             size: '205 Mo',
             type: 'Image JPG',
             date: '26/05/2005 20:40',
-            selected: false
+            selected: false,
+            path: require('../img/picto-image.png')
         },
         {
             id: 1,
@@ -14,7 +15,8 @@ export const Photos =
             size: '214 Mo',
             type: 'Image JPG',
             date: '26/05/2005 20:42',
-            selected: false
+            selected: false,
+            path: require('../img/picto-image.png')
         },
         {
             id: 2,
@@ -22,7 +24,8 @@ export const Photos =
             size: '189 Mo',
             type: 'Image JPG',
             date: '26/05/2005 20:43',
-            selected: false
+            selected: false,
+            path: require('../img/photos/wonkie.png')
         },
         {
             id: 3,
@@ -30,6 +33,7 @@ export const Photos =
             size: '202 Mo',
             type: 'Image JPG',
             date: '26/05/2005 20:45',
-            selected: false
+            selected: false,
+            path: require('../img/picto-image.png')
         }
     ]

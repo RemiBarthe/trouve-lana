@@ -46,7 +46,11 @@
             />
           </div>
 
-          <img alt="profile pic" :src="conversation.picture" />
+          <img
+            class="profile-picture"
+            alt="profile picture"
+            :src="conversation.picture"
+          />
           <p>
             {{ conversation.name }}
           </p>
@@ -176,7 +180,7 @@ export default {
         margin: 10px 0;
         border-radius: 10px;
         cursor: pointer;
-        border-bottom: 1px solid #bbb;
+        box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.4);
         position: relative;
         overflow: hidden;
 
@@ -189,6 +193,12 @@ export default {
         p {
           font-weight: 600;
           margin-top: 3px;
+        }
+
+        .profile-picture {
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
         }
       }
     }

@@ -1,7 +1,11 @@
 <template>
   <div class="conversation">
     <div class="header-conversation">
-      <img alt="profile pic" :src="conversation.picture" />
+      <img
+        class="profile-picture"
+        alt="profile pic"
+        :src="conversation.picture"
+      />
 
       <p>{{ conversation.name }} - Hors ligne</p>
     </div>
@@ -67,6 +71,12 @@ export default {
     border-bottom: 1px solid rgba(255, 255, 255, 0.7);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+
+    .profile-picture {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+    }
 
     p {
       margin-left: 5px;

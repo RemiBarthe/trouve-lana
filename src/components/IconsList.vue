@@ -1,7 +1,7 @@
 <template>
   <div class="icons-list">
     <IconItem
-      v-for="icon in windows"
+      v-for="icon in iconsOnDesktop"
       :key="icon.id"
       :icon="icon"
       @click="setIconSelected(icon.id)"
@@ -19,7 +19,10 @@ export default {
     IconItem
   },
   computed: {
-    ...mapState(["windows"])
+    ...mapState(["windows"]),
+    iconsOnDesktop() {
+      return this.windows.filter(window => window.onDesktop);
+    }
   },
   methods: {
     setIconSelected(id) {

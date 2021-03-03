@@ -8,7 +8,8 @@ export const Windows =
             active: false,
             selected: false,
             position: 0,
-            fullScreen: false
+            fullScreen: false,
+            onDesktop: true
         },
         {
             id: 1,
@@ -18,7 +19,8 @@ export const Windows =
             active: false,
             selected: false,
             position: 0,
-            fullScreen: false
+            fullScreen: false,
+            onDesktop: true
         },
         {
             id: 2,
@@ -28,7 +30,8 @@ export const Windows =
             active: false,
             selected: false,
             position: 0,
-            fullScreen: false
+            fullScreen: false,
+            onDesktop: true
         },
         {
             id: 3,
@@ -38,7 +41,8 @@ export const Windows =
             active: false,
             selected: false,
             position: 0,
-            fullScreen: false
+            fullScreen: false,
+            onDesktop: true
         },
         {
             id: 4,
@@ -48,7 +52,8 @@ export const Windows =
             active: false,
             selected: false,
             position: 0,
-            fullScreen: false
+            fullScreen: false,
+            onDesktop: true
         },
         {
             id: 5,
@@ -58,6 +63,18 @@ export const Windows =
             active: false,
             selected: false,
             position: 0,
-            fullScreen: false
+            fullScreen: false,
+            onDesktop: true
+        },
+        {
+            id: 6,
+            key: 'image',
+            title: 'Aperçu des images',
+            image: require('../img/picto-image.png'),
+            active: false,
+            selected: false,
+            position: 0,
+            fullScreen: false,
+            onDesktop: false
         }
     ]

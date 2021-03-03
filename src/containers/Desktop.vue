@@ -39,6 +39,12 @@
       :window="windows[5]"
       @click="setWindowPosition(windows[5].id)"
     />
+
+    <WindowPhoto
+      v-if="windows[6].active"
+      :window="windows[6]"
+      @click="setWindowPosition(windows[6].id)"
+    />
   </div>
 </template>
 
@@ -52,6 +58,7 @@ import WindowMessenger from "@/components/windows/WindowMessenger";
 import WindowMail from "@/components/windows/WindowMail";
 import WindowWebcam from "@/components/windows/WindowWebcam";
 import WindowDestination from "@/components/windows/WindowDestination";
+import WindowPhoto from "@/components/windows/WindowPhoto";
 
 export default {
   name: "Desktop",
@@ -63,7 +70,8 @@ export default {
     WindowMessenger,
     WindowMail,
     WindowWebcam,
-    WindowDestination
+    WindowDestination,
+    WindowPhoto
   },
   computed: {
     ...mapState(["windows"])

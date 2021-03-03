@@ -88,7 +88,7 @@ export const Conversations = [
     },
     {
         name: 'Alice',
-        picture: require('../img/icons/msn.png'),
+        picture: require('../img/photos/wonkie.png'),
         password: '',
         messages: [
             {
