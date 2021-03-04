@@ -69,7 +69,10 @@ export default {
   methods: {
     getCurrentTime() {
       const date = new Date();
-      this.currentDate = date.getHours() + ":" + date.getMinutes();
+      let hours = ("0" + date.getHours()).slice(-2);
+      let minutes = ("0" + date.getMinutes()).slice(-2);
+
+      this.currentDate = hours + ":" + minutes;
     },
     setWindowPosition(id) {
       this.$store.dispatch("setWindowPosition", { id: id });
