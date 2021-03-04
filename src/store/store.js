@@ -2,6 +2,7 @@ import { createStore } from "vuex"
 import { Windows } from "@/assets/js/windows"
 import { Conversations } from "@/assets/js/conversations"
 import { Photos } from "@/assets/js/photos"
+import { Mails } from "@/assets/js/mails"
 
 export const SET_WINDOWS_LOGGED_IN = 'SET_WINDOWS_LOGGED_IN'
 export const SET_WINDOW_ACTIVE = 'SET_WINDOW_ACTIVE'
@@ -10,6 +11,8 @@ export const SET_FULL_SCEEN = 'SET_FULL_SCEEN'
 export const SET_CONVERSATION_PASSWORD = 'SET_CONVERSATION_PASSWORD'
 export const SET_MESSENGER_PASSWORD = 'SET_MESSENGER_PASSWORD'
 export const SET_ACTIVE_PHOTO = 'SET_ACTIVE_PHOTO'
+export const SET_ACTIVE_MAIL = 'SET_ACTIVE_MAIL'
+
 
 export const store = createStore({
     state: {
@@ -18,6 +21,8 @@ export const store = createStore({
         conversations: Conversations,
         photos: Photos,
         activePhoto: {},
+        mails: Mails,
+        activeMail: {},
         messengerPassword: "filou88",
         positionMax: 0,
 
@@ -43,6 +48,9 @@ export const store = createStore({
         },
         setActivePhoto({ commit }, payload) {
             commit(SET_ACTIVE_PHOTO, payload)
+        },
+        setActiveMail({ commit }, payload) {
+            commit(SET_ACTIVE_MAIL, payload)
         }
     },
     mutations: {
@@ -69,6 +77,9 @@ export const store = createStore({
         },
         [SET_ACTIVE_PHOTO](state, payload) {
             state.activePhoto = payload
+        },
+        [SET_ACTIVE_MAIL](state, payload) {
+            state.activeMail = payload
         }
     }
 })
