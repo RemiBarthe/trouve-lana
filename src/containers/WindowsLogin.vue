@@ -118,6 +118,8 @@ export default {
 
         img {
           padding-left: 2px;
+          width: 32px;
+          height: 32px;
         }
       }
 
@@ -159,6 +161,7 @@ export default {
 
       .logo-windows {
         width: 150px;
+        height: 120px;
         pointer-events: none;
       }
 
@@ -198,6 +201,7 @@ export default {
 
       .logo-user {
         width: 60px;
+        height: 60px;
         pointer-events: none;
       }
 

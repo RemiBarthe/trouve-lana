@@ -102,10 +102,11 @@ export default {
     inputPasswordMessenger: "",
     inputPasswordConversation: "",
     wrongPasswordMessenger: false,
-    wrongPasswordConversation: false
+    wrongPasswordConversation: false,
+    messengerPassword: "filou88"
   }),
   computed: {
-    ...mapState(["conversations", "messengerPassword"]),
+    ...mapState(["conversations"]),
     activeConversation() {
       return this.conversations[this.idActive];
     }
@@ -118,7 +119,7 @@ export default {
       if (
         this.inputPasswordMessenger.toLowerCase() === this.messengerPassword
       ) {
-        this.$store.dispatch("setMessengerPassword", "");
+        this.messengerPassword = "";
       } else {
         this.wrongPasswordMessenger = true;
         this.inputPasswordMessenger = "";
@@ -153,7 +154,7 @@ export default {
   right: 200px;
   top: 80px;
   user-select: none;
-  background: #0e48a1;
+  background: #ddd;
 
   .window-body {
     height: auto;
@@ -230,6 +231,7 @@ export default {
     justify-content: center;
     flex-direction: column;
     width: 100%;
+    background: #0e48a1;
 
     p {
       font-size: 14px;

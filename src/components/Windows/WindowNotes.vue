@@ -54,6 +54,7 @@ export default {
     height: 100%;
     margin: 3px;
     margin-top: 1px;
+    margin-bottom: 7px;
   }
 
   .text-notes {

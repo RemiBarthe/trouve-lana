@@ -23,7 +23,6 @@ export const store = createStore({
         activePhoto: {},
         mails: Mails,
         activeMail: {},
-        messengerPassword: "filou88",
         positionMax: 0,
 
     },

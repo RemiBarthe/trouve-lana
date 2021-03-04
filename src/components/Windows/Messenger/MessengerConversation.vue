@@ -67,11 +67,11 @@ export default {
     display: flex;
     align-items: center;
     padding: 10px;
-    background: #ddd;
+    background: #0e48a1;
     border-bottom: 1px solid rgba(255, 255, 255, 0.7);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-
+    color: white;
     .profile-picture {
       width: 35px;
       height: 35px;
@@ -113,7 +113,7 @@ export default {
 .send-message {
   height: 100px;
   display: flex;
-  border-top: solid #0e48a1 2px;
+  border-top: solid #ddd 2px;
 
   textarea {
     width: 100%;
