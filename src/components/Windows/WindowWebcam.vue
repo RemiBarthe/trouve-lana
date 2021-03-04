@@ -6,7 +6,9 @@
   >
     <TitleBar :window="window" />
 
-    <div class="window-body"></div>
+    <div class="window-body">
+      <img alt="Webcam image" src="@/assets/img/webcam.gif" />
+    </div>
   </div>
 </template>
 
@@ -31,5 +33,21 @@ export default {
   right: 20px;
   top: 20px;
   user-select: none;
+
+  .window-body {
+    position: absolute;
+    top: 28px;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    margin: 3px;
+    margin-top: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
 }
 </style>
