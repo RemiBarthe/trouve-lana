@@ -1,4 +1,4 @@
-export const Notes = `Mdp messagerie : nom du chien + année naiss
+export const Notes = `Mdp messagerie : nom du chien + mon année naiss
 
 Idée cadeau maman : appareil photo
 
@@ -9,7 +9,7 @@ Trucs à faire :
  - Répondre à Mme Kolpberg 
  - Ne pas oublier le devoir de chimie !!!!
 
-Délire Alfredo : A5
+Délire Alfredo : RJYJTWF
 
 Soirée chez Al demain soir !
 

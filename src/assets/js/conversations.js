@@ -77,6 +77,10 @@ export const Conversations = [
                 isSender: false
             },
             {
+                content: 'Ca rappelle les souvenirs de vacances',
+                isSender: false
+            },
+            {
                 content: 'Arrete je flippe',
                 isSender: true
             },
@@ -657,7 +661,7 @@ export const Conversations = [
                 isSender: true
             },
             {
-                content: 'Au fait j’ai réussi a trouver le code pour Al, c’est Alice qui me l’a donné tu le veux ?',
+                content: 'Au fait j’ai réussi a trouver la clé pour le code d’Alfredo, c’est Alice qui me l’a donné tu le veux ?',
                 isSender: false
             },
             {
@@ -665,7 +669,7 @@ export const Conversations = [
                 isSender: true
             },
             {
-                content: 'RJYJTWF',
+                content: 'A=5',
                 isSender: false
             },
             {

@@ -68,6 +68,7 @@ export default {
     padding: 2px;
     white-space: nowrap;
     border: 1px solid rgb(150, 171, 255);
+    white-space: pre-line;
   }
 }
 </style>

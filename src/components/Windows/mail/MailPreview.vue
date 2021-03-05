@@ -8,6 +8,12 @@
 
     <p class="content">
       {{ activeMail.content }}
+
+      <img
+        v-if="activeMail.photo"
+        alt="courrier"
+        src="@/assets/img/photos/courrier.jpg"
+      />
     </p>
   </div>
 </template>
@@ -56,6 +62,12 @@ export default {
     top: 40px;
     bottom: 0;
     white-space: pre-line;
+
+    img {
+      margin-top: 10px;
+      width: 100%;
+      max-width: 800px;
+    }
   }
 }
 </style>
