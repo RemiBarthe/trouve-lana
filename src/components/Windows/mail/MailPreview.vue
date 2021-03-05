@@ -2,7 +2,7 @@
   <div class="mail-preview" v-if="activeMail.from">
     <p class="infos">
       <span class="bold">De : </span> {{ activeMail.from }}
-      <span class="bold"> À: </span>lana@hotmail.fr<br />
+      <span class="bold"> À: </span>lana.lariviere@hotmail.fr<br />
       <span class="bold">Objet :</span> {{ activeMail.object }}
     </p>
 
@@ -48,12 +48,14 @@ export default {
   }
 
   .content {
-    padding: 10px 50px;
+    width: 90%;
+    padding: 10px 5%;
     overflow-y: scroll;
     font-size: 13px;
     position: absolute;
     top: 40px;
     bottom: 0;
+    white-space: pre-line;
   }
 }
 </style>

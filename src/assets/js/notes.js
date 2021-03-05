@@ -1,4 +1,4 @@
-export const Notes = `Mdp messagerie : nom du chien + date naiss
+export const Notes = `Mdp messagerie : nom du chien + année naiss
 
 Idée cadeau maman : appareil photo
 

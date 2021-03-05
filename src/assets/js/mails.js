@@ -1,16 +1,40 @@
 export const Mails =
     [
         {
-            from: 'manuel.crapule@hotmail.fr',
-            object: 'Helloooo ca biche ?',
+            from: 'justine.portalier@yahoo.fr',
+            object: 'Devoir de Chimie ',
             date: '26/05/2005 20:40',
-            content: 'Azerty'
+            content: `Coucou Lana,
+            
+            Tiens, comme promis le devoir de physique ! 
+
+            Passes une bonne journée !
+
+            Justine`
         },
         {
-            from: 'fernandlandouille@yahoo.fr',
-            object: 'Tp de SVT',
+            from: 'fernand.lariviere@wanadoo.fr',
+            object: 're factures',
             date: '26/05/2005 20:40',
-            content: 'Azerty'
+            content: `
+            Hello ma chérie,
+            
+            Bien recu. Merci pour l’info. 
+            
+            Je m’en occuperais quand je m’y rendrais. 
+            
+            Bises
+
+                De lana.lariviere@hotmail.fr 
+
+                Salut papa, on a reçu des factures dans la maison.
+
+                Je t’envoie une photo pour que tu vois ce qu’il y a.
+
+                Bisous.
+
+                [photo-facture.png]
+            `
         },
         {
             from: 'fernandlandouille@yahoo.fr',
