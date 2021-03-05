@@ -67,7 +67,7 @@ export default {
   data: () => ({
     toolbarItems: ["Fichier", "Edition", "Affichage", "Outils", "Message", "?"],
     mailPassword: "nirvana",
-    mailLogin: "lana.bar@hotmail.fr",
+    mailLogin: "lana.lariviere@hotmail.fr",
     inputPasswordMail: "",
     inputLoginMail: "",
     wrongPasswordMail: false

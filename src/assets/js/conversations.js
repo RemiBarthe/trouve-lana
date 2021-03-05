@@ -1,8 +1,8 @@
 export const Conversations = [
     {
         name: 'Alfredo',
-        picture: require('../img/icons/msn.png'),
-        password: 'LEMOTDEPASSE',
+        picture: require('../img/users/alfredo.png'),
+        password: 'METEORA',
         messages: [
             {
                 content: 'Salut ! A quelle heure la soirée ?',
@@ -69,7 +69,7 @@ export const Conversations = [
                 isSender: false
             },
             {
-                content: '[Photo Noroit Club]',
+                content: '[numero-rue.jpg]',
                 isSender: true
             },
             {
@@ -88,7 +88,7 @@ export const Conversations = [
     },
     {
         name: 'Alice',
-        picture: require('../img/photos/wonkie.png'),
+        picture: require('../img/users/alice.png'),
         password: '',
         messages: [
             {
@@ -287,7 +287,7 @@ export const Conversations = [
     },
     {
         name: 'Christine',
-        picture: require('../img/icons/msn.png'),
+        picture: require('../img/users/christine.png'),
         password: '',
         messages: [
             {
@@ -434,7 +434,7 @@ export const Conversations = [
     },
     {
         name: 'Justine',
-        picture: require('../img/icons/msn.png'),
+        picture: require('../img/users/justine.png'),
         password: '',
         messages: [
             {
@@ -478,7 +478,7 @@ export const Conversations = [
                 isSender: true
             },
             {
-                content: 'Mon  mail c’est [mailLena]',
+                content: 'Mon  mail c’est lana.lariviere@hotmail.fr',
                 isSender: true
             },
             {
@@ -505,7 +505,7 @@ export const Conversations = [
     },
     {
         name: 'Paul',
-        picture: require('../img/icons/msn.png'),
+        picture: require('../img/users/paul.png'),
         password: '',
         messages: [
             {
@@ -665,7 +665,7 @@ export const Conversations = [
                 isSender: true
             },
             {
-                content: '[CODE CESAR]',
+                content: 'RJYJTWF',
                 isSender: false
             },
             {
@@ -708,7 +708,7 @@ export const Conversations = [
     },
     {
         name: 'Valentin',
-        picture: require('../img/icons/msn.png'),
+        picture: require('../img/users/valentin.png'),
         password: '',
         messages: [
             {

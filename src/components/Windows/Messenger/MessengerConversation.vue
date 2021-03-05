@@ -17,7 +17,15 @@
           :key="index"
           :class="{ self: message.isSender }"
         >
-          {{ message.content }}
+          <template v-if="message.content !== photo">
+            {{ message.content }}
+          </template>
+
+          <img
+            v-else
+            alt="numero rue"
+            src="@/assets/img/photos/numero-rue.png"
+          />
         </p>
       </div>
     </div>
@@ -34,7 +42,8 @@
 export default {
   name: "MessengerConversation",
   data: () => ({
-    inputMessage: ""
+    inputMessage: "",
+    photo: "[numero-rue.jpg]"
   }),
   props: {
     conversation: Object
@@ -105,6 +114,10 @@ export default {
           align-self: flex-end;
           background-color: #0e48a140;
         }
+      }
+
+      img {
+        width: 100%;
       }
     }
   }
