@@ -103,7 +103,7 @@ export default {
     inputPasswordConversation: "",
     wrongPasswordMessenger: false,
     wrongPasswordConversation: false,
-    messengerPassword: "filou88"
+    messengerPassword: ["filou88", "filou1988"]
   }),
   computed: {
     ...mapState(["conversations"]),
@@ -117,7 +117,9 @@ export default {
     },
     checkPasswordMessenger() {
       if (
-        this.inputPasswordMessenger.toLowerCase() === this.messengerPassword
+        this.messengerPassword.includes(
+          this.inputPasswordMessenger.trim().toLowerCase()
+        )
       ) {
         this.messengerPassword = "";
       } else {

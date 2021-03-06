@@ -1,22 +1,30 @@
 <template>
-  <Desktop v-if="windowsLoggedIn" />
+  <template v-if="lanaFound">
+    <EndContainer />
+  </template>
 
-  <WindowsLogin v-else />
+  <template v-else>
+    <Desktop v-if="windowsLoggedIn" />
+
+    <WindowsLogin v-else />
+  </template>
 </template>
 
 <script>
 import { mapState } from "vuex";
 import WindowsLogin from "./containers/WindowsLogin";
 import Desktop from "./containers/Desktop";
+import EndContainer from "./containers/EndContainer";
 
 export default {
   name: "App",
   components: {
     WindowsLogin,
-    Desktop
+    Desktop,
+    EndContainer
   },
   computed: {
-    ...mapState(["windowsLoggedIn"])
+    ...mapState(["windowsLoggedIn", "lanaFound"])
   }
 };
 </script>

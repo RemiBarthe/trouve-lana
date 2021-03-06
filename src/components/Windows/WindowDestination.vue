@@ -13,6 +13,8 @@
         (numero rue ville)
       </p>
 
+      <p v-if="loading" class="loading">Calcul de l'itinéraire en cours ..</p>
+
       <input
         v-model="inputDestination"
         type="text"
@@ -48,7 +50,8 @@ export default {
       "45 rue de l académie cherrueix"
     ],
     inputDestination: "",
-    wrongDestination: false
+    wrongDestination: false,
+    loading: false
   }),
   methods: {
     checkDestination() {
@@ -57,7 +60,11 @@ export default {
           this.inputDestination.trim().toLocaleLowerCase()
         )
       ) {
-        alert("Félicitation vous avez trouvé Lana ..");
+        this.loading = true;
+        this.wrongDestination = false;
+        setTimeout(() => {
+          this.$store.dispatch("setLanaFound", true);
+        }, 3000);
       } else {
         this.wrongDestination = true;
         this.inputDestination = "";
@@ -88,6 +95,11 @@ export default {
     p {
       font-size: 14px;
       text-align: center;
+
+      &.loading {
+        font-size: 19px;
+        margin-top: 15px;
+      }
 
       &.wrong-destination {
         margin-top: 10px;

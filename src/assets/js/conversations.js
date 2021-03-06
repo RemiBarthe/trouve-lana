@@ -661,7 +661,7 @@ export const Conversations = [
                 isSender: true
             },
             {
-                content: 'Au fait j’ai réussi a trouver la clé pour le code d’Alfredo, c’est Alice qui me l’a donné tu le veux ?',
+                content: 'Au fait j’ai réussi a trouver la clé pour le code d’Alfredo, c’est Alice qui me l’a donné tu la veux ?',
                 isSender: false
             },
             {

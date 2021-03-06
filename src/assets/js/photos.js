@@ -5,7 +5,7 @@ export const Photos =
             name: 'D_504.jpg',
             size: '283 Ko',
             type: 'Image JPG',
-            date: '26/05/2005 20:40',
+            date: '26/04/2005 20:40',
             selected: false,
             path: require('../img/photos/chien.png')
         },

@@ -12,6 +12,7 @@ export const SET_CONVERSATION_PASSWORD = 'SET_CONVERSATION_PASSWORD'
 export const SET_MESSENGER_PASSWORD = 'SET_MESSENGER_PASSWORD'
 export const SET_ACTIVE_PHOTO = 'SET_ACTIVE_PHOTO'
 export const SET_ACTIVE_MAIL = 'SET_ACTIVE_MAIL'
+export const SET_LANA_FOUND = 'SET_LANA_FOUND'
 
 
 export const store = createStore({
@@ -24,6 +25,7 @@ export const store = createStore({
         mails: Mails,
         activeMail: {},
         positionMax: 0,
+        lanaFound: false
 
     },
     actions: {
@@ -50,6 +52,9 @@ export const store = createStore({
         },
         setActiveMail({ commit }, payload) {
             commit(SET_ACTIVE_MAIL, payload)
+        },
+        setLanaFound({ commit }, payload) {
+            commit(SET_LANA_FOUND, payload)
         }
     },
     mutations: {
@@ -79,6 +84,9 @@ export const store = createStore({
         },
         [SET_ACTIVE_MAIL](state, payload) {
             state.activeMail = payload
+        },
+        [SET_LANA_FOUND](state, payload) {
+            state.lanaFound = payload
         }
     }
 })
