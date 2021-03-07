@@ -38,7 +38,11 @@
     <div class="radial-bar-bottom"></div>
 
     <div class="footer-bar">
-      <div class="shutdown">
+      <a
+        href="https://github.com/RemiBarthe/trouve-lana"
+        target="_blank"
+        class="shutdown"
+      >
         <img
           class="logo-shutdown"
           alt="logo shutdown"
@@ -46,7 +50,7 @@
         />
 
         <p class="shutdown-title">Arrêter l'ordinateur</p>
-      </div>
+      </a>
 
       <p class="text-footer">
         Après avoir ouvert votre session, vous pouvez ajouter<br />
@@ -106,6 +110,7 @@ export default {
       cursor: pointer;
       width: 191px;
       height: 32px;
+      text-decoration: none;
 
       &:hover {
         background-color: rgba(0, 0, 0, 0.2);
